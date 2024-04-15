@@ -44,11 +44,7 @@ namespace Graphic
             {
                 --scoresCnt;
                 scores.Text = "Очки: " + scoresCnt;
-                redCircle.radius = 1;
-                redCircle.X = pbMain.Width / 2 - 200 + rnd.Next() % 400;
-                redCircle.Y = pbMain.Width / 2 - 200 + rnd.Next() % 400;
-                redCircle.Angle = 0;
-
+                redCircle.Change(pbMain.Width);
             };
 
             marker = new Marker(pbMain.Width / 2 + 50, pbMain.Height / 2 + 50, 0);

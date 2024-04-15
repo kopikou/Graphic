@@ -9,7 +9,6 @@ namespace Graphic.Objects
 {
     internal class GreenCircle : BaseObject
     {
-        //public Action<GreenCircle> ReductionToZero;
         private int radius = 30;
         public GreenCircle(float x, float y, float angle) : base(x, y, angle)
         {

@@ -10,9 +10,9 @@ namespace Graphic.Objects
 {
     internal class RedCircle : BaseObject
     {
-        public static Random rnd = new Random();
+        private static Random rnd = new Random();
         public Action<Player> OnPlayerOverlap;
-        public int radius = 1;
+        private int radius = 1;
         public RedCircle(float x, float y, float angle) : base(x, y, angle)
         {
         }
@@ -30,6 +30,13 @@ namespace Graphic.Objects
         public void Increase()
         {
             ++radius;
+        }
+        public void Change(float paintWidth)
+        {
+            radius = 1;
+            X = paintWidth / 2 - 200 + rnd.Next() % 400;
+            Y = paintWidth / 2 - 200 + rnd.Next() % 400;
+            Angle = 0;
         }
         public override void Overlap(BaseObject obj)
         {
